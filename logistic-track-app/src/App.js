@@ -3,15 +3,15 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
+import About from "./pages/about/About";
+import Help from "./pages/help/Help";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
 
   const {currentUser} = useContext(AuthContext)
 
@@ -20,7 +20,6 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -86,9 +85,28 @@ function App() {
               />
             </Route>
           </Route>
+          <Route path="/about">
+            <Route
+              index
+              element={
+                <RequireAuth>
+                  <About />
+                </RequireAuth>
+              }
+            />
+          </Route>
+          <Route path="/help">
+            <Route
+              index
+              element={
+                <RequireAuth>
+                  <Help />
+                </RequireAuth>
+              }
+            />
+          </Route>
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 

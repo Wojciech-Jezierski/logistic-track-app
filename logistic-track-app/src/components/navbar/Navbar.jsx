@@ -1,12 +1,4 @@
 import "./navbar.scss";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
-import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
-import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import Logo from "../../Assets/Logo.png";
 import {AuthContext} from "../../context/AuthContext"
@@ -27,7 +19,6 @@ import { IconContext } from "react-icons";
 
 
 const Navbar = () => {
-//   const { dispatch } = useContext(DarkModeContext);
   const navitage = useNavigate()
   const {dispatch} = useContext(AuthContext)
 
@@ -48,21 +39,21 @@ const logout = (userCredential) => {
             <Bars />
             <NavMenu>
                 <NavLink to='/'>
-                    Track map
+                    Mapa
                 </NavLink>
                 <NavLink to='/about'>
-                    About
+                    O aplikacji
                 </NavLink>
                 <NavLink to='/users'>
-                    Users
+                    Użytkownicy
                 </NavLink>
                 <NavLink to='/help'>
-                    Help
+                    Pomoc
                 </NavLink>
             </NavMenu>
                 <Button onClick={logout} to='/login'>
                     <GrLogout />
-                    Logout
+                    Wyloguj
                 </Button>
         </Nav>
     </>

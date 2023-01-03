@@ -1,5 +1,4 @@
 import "./new.scss";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
@@ -94,7 +93,6 @@ const New = ({ inputs, title }) => {
 
   return (
     <div className="new">
-      {/* <Sidebar /> */}
       <div className="newContainer">
         <Navbar />  
         <div className="top">
