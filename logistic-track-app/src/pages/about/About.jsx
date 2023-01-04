@@ -9,7 +9,7 @@ const About = () => {
         <div className='contentContainer'>
             <div className='container'>
                 <h1>O aplikacji</h1>
-                <p>Logistic track app - Jest to aplikacja stworzona dla firm logistycznych aby ułatwić proces transportu. Dzięki niej można zaoszczędzić sporo czasu na lokalizowaniu pracowników.</p>
+                <p><b>Logistic track app</b> - Jest to aplikacja stworzona dla firm logistycznych aby ułatwić proces transportu. Dzięki niej można zaoszczędzić sporo czasu na lokalizowaniu pracowników.</p>
                 <p>Służy do zarządzania kontami pracowników oraz lokalizowaniu kierowców.</p>
                 <p>Aplikacja została stworzona na potrzeby projektu inżynierskiego.</p><br></br><br></br>
                 <p>Autorem projektu jest: <b>Wojciech Jezierski</b></p>
