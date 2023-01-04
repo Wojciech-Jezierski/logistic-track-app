@@ -7,7 +7,6 @@ import About from "./pages/about/About";
 import Help from "./pages/help/Help";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { userInputs } from "./formSource";
-import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 

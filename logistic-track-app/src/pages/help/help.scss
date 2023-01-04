@@ -32,3 +32,9 @@ h1 {
     margin-bottom: 40px;
     font-size: 40px;
 }
+
+@media (max-width: 1308px) {
+    .contentContainer {
+        width: 930px;
+    }
+}   

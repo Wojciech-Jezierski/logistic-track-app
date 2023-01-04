@@ -35,3 +35,9 @@ h1 {
     font-size: 40px;
     color: white;
 }
+
+@media (max-width: 1308px) {
+    .contentContainer {
+        width: 930px;
+    }
+}   
