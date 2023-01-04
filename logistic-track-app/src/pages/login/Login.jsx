@@ -51,7 +51,6 @@ const Login = () => {
         <button type="submit">Login</button>
         {error && <span>Wrong email or password!</span>}
       </form>
-      <button onClick={logout}>Logout</button>
     </div>
   );
 };

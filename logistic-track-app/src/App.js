@@ -6,7 +6,7 @@ import New from "./pages/new/New";
 import About from "./pages/about/About";
 import Help from "./pages/help/Help";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { productInputs, userInputs } from "./formSource";
+import { userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
@@ -54,32 +54,6 @@ function App() {
                 element={
                   <RequireAuth>
                     <New inputs={userInputs} title="Add New User" />
-                  </RequireAuth>
-                }
-              />
-            </Route>
-            <Route path="products">
-              <Route
-                index
-                element={
-                  <RequireAuth>
-                    <List />
-                  </RequireAuth>
-                }
-              />
-              <Route
-                path=":productId"
-                element={
-                  <RequireAuth>
-                    <Single />
-                  </RequireAuth>
-                }
-              />
-              <Route
-                path="new"
-                element={
-                  <RequireAuth>
-                    <New inputs={productInputs} title="Add New Product" />
                   </RequireAuth>
                 }
               />

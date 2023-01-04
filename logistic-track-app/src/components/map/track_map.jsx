@@ -125,11 +125,18 @@ function Map() {
     
 
 
-    var but = <Marker position={{ lat:55, lng:17}}/>
+    var user1 = <Marker className="marker1" position={{ lat:54.30464423711404, lng:18.630494403210474}}/>
+    var user2 = <Marker className="marker2" position={{ lat:54.34262510085353, lng:18.522959060482584}}/>
+    var user3 = <Marker className="marker3" position={{ lat:54.386050336555414, lng:18.655703356560114}}/>
+    var user4 = <Marker className="marker4" position={{ lat:54.31745672456575, lng:18.74592124417725}}/>
     return (
     
         <GoogleMap id="map" zoom={10} center={center} mapContainerClassName="map-container">
             <Marker position={center} />
+            {user1}
+            {user2}
+            {user3}
+            {user4}
         </GoogleMap>
 
       // <div>

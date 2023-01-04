@@ -25,18 +25,18 @@ export const userInputs = [
   },
   {
     id: "password",
-    label: "Password",
+    label: "Hasło",
     type: "password",
   },
   {
     id: "Type_of_worker",
-    label: "Type of worker",
+    label: "Typ pracownika",
     type: "text",
     placeholder: "Forwarder or Driver"
   },
   {
     id: "country",
-    label: "Country",
+    label: "Kraj",
     type: "text",
     placeholder: "Poland",
   },
@@ -46,37 +46,4 @@ export const userInputs = [
   //   type: "geopoint",
   //   placeholder: "...",
   // }
-];
-
-export const productInputs = [
-  {
-    id: 1,
-    label: "Title",
-    type: "text",
-    placeholder: "Apple Macbook Pro",
-  },
-  {
-    id: 2,
-    label: "Description",
-    type: "text",
-    placeholder: "Description",
-  },
-  {
-    id: 3,
-    label: "Category",
-    type: "text",
-    placeholder: "Computers",
-  },
-  {
-    id: 4,
-    label: "Price",
-    type: "text",
-    placeholder: "100",
-  },
-  {
-    id: 5,
-    label: "Stock",
-    type: "text",
-    placeholder: "in stock",
-  },
 ];
