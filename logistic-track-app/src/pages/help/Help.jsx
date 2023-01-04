@@ -6,7 +6,7 @@ import "./help.scss";
 const Help = () => {
   return (
     <div className='about'>
-            <Navbar />
+      <Navbar />
         <div className='contentContainer'>
             <div className='container'>
                 <h1>Pomoc</h1>
