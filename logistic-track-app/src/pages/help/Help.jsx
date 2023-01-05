@@ -10,8 +10,7 @@ const Help = () => {
         <div className='contentContainer'>
             <div className='container'>
                 <h1>Pomoc</h1>
-                <p>Aplikacja została stworzona na potrzeby projektu inżynierskiego.</p>
-                <p>Aby rozpocząć użytkowanie aplikacji należy się zalogować.</p>
+                <p>Aby rozpocząć użytkowanie aplikacji należy się zalogować danymi, które zostały podane w firebase.</p>
                 <p>W pasku nawigacji znajdują się cztery zakładki:</p>
                   <ul>
                     <li>Mapa</li>

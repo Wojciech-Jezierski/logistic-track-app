@@ -75,7 +75,7 @@ const Datatable = () => {
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
             >
-              Delete
+              Usuń
             </div>
           </div>
         );
@@ -85,9 +85,9 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
+        Dodaj Nowego Użytkownika
         <Link to="/users/new" className="link">
-          Add New
+          Dodaj nowego
         </Link>
       </div>
       <DataGrid
