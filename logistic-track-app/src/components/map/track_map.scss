@@ -1,6 +1,6 @@
 .map-container {
-    width: 70%;
-    height: 60vh;
+    width: 75%;
+    height: 65vh;
     margin: auto;
     margin-top: 3%;
 }
@@ -13,3 +13,63 @@
 .marker1 {
     color: blue;
 }
+
+@media (max-width: 880px) {
+    .map-container {
+        margin-top: 1%;
+        width: 87%;
+        height: 54vh;
+    }
+}   
+
+@media (max-width: 1500px) {
+    .map-container {
+        margin-top: 3%;
+        width: 80%;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 880px) {
+    .map-container {
+        margin-top: 1%;
+        width: 94%;
+        height: 65vh;
+    }
+}   
+
+@media (max-width: 768px) {
+    .map-container {
+        margin-top: 0.8%;
+        position: relative;
+        height: 55vh;
+        width: 98%;
+    }
+}   
+
+@media (max-width: 430px) {
+    .map-container {
+        margin-top: 0.8%;
+        position: relative;
+        height: 63vh;
+        width: 98%;
+    }
+}
+
+@media (max-width: 400px) {
+    .map-container {
+        margin-top: 0.8%;
+        position: relative;
+        height: 69vh;
+        width: 98%;
+    }
+}   
+
+@media (max-width: 376px) {
+    .map-container {
+        margin-top: 0.8%;
+        position: relative;
+        height: 78vh;
+        width: 98%;
+    }
+}   

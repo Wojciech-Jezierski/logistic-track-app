@@ -1,21 +1,20 @@
 import "./navbar.scss";
 import { useContext } from "react";
 import Logo from "../../Assets/Logo.png";
+import LogoSm from "../../Assets/Logo_small.png";
 import {AuthContext} from "../../context/AuthContext"
 import {
   Nav,
   NavLink,
   Bars,
   NavMenu,
-  NavBtn,
-  NavBtnLink,
   Button,
-  NavLogo
+  NavLogo,
+  NavLogoSm,
 } from './NavbarElements';
-import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { GrLogout } from 'react-icons/gr';
-import { IconContext } from "react-icons";
+import HamburgerMenu from "./NavbarElements";
 
 
 const Navbar = () => {
@@ -32,11 +31,12 @@ const logout = (userCredential) => {
     <>
         <Nav>
             <NavLogo to='/'>
-                
                     <img src={Logo}></img>
-                
             </NavLogo>
-            <Bars />
+            <NavLogoSm to='/'>
+                    <img src={LogoSm}></img>
+            </NavLogoSm>
+            <HamburgerMenu />
             <NavMenu>
                 <NavLink to='/'>
                     Mapa
@@ -61,3 +61,5 @@ const logout = (userCredential) => {
 };
 
 export default Navbar;
+
+

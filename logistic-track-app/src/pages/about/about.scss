@@ -22,22 +22,26 @@ ul {
     text-align: left;
     margin: auto;
     font-size: 20px;
-    color: white;
 }
 
 p {
     font-size: 20px;
-    color: white;
 }
 
 h1 {
     margin-bottom: 40px;
     font-size: 40px;
-    color: white;
 }
 
 @media (max-width: 1308px) {
     .contentContainer {
-        width: 930px;
+        width: 990px;
     }
+}
+
+@media (max-width: 1000px) {
+    p {
+        font-size: 15px;
+    }
+
 }   
