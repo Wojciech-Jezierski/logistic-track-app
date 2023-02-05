@@ -24,21 +24,6 @@ function Track_Map() {
 function Map() {
   
   const center = useMemo(() => ({ lat: 54.35036156245502, lng: 18.653247236602194}), []);
-    
-
-  // const [latitude, setLatitude] = useState();
-  // const [longitude, setLongitude] = useState();
-  // React.useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition((position) => {
-  //     setLatitude(position.coords.latitude)
-  //     setLongitude(position.coords.longitude)
-  //   })
-
-  // }, [])
-
-
- 
-
 
   const [ markering, setMarkering ] = useState([]);
     // LISTEN (REALTIME)
@@ -61,7 +46,6 @@ function Map() {
       sub();
     };
   }, []);
-
 
 
   const [latitude, setLatitude] = useState();
@@ -91,26 +75,12 @@ function Map() {
       })
   
     }, [])
- 
-
-
-    // var user1 = <Marker className="marker1" position={{ lat:54.30464423711404, lng:18.630494403210474}}/>
-    // var user2 = <Marker className="marker2" position={{ lat:54.34262510085353, lng:18.522959060482584}}/>
-    // var user3 = <Marker className="marker3" position={{ lat:54.386050336555414, lng:18.655703356560114}}/>
-    // var user4 = <Marker className="marker4" position={{ lat:54.31745672456575, lng:18.74592124417725}}/>
 
     const [selectedMarker, setSelectedMarker] = useState("");
     return (
         <GoogleMap id="map" zoom={10} center={center} mapContainerClassName="map-container">
-            {/* 
-            <Marker position={center} />
-            {user1}
-            {user2}
-            {user3}
-            {user4} */}
-
             {markering.map((markering) => {
-              if(markering.Type_of_worker === "Driver") {
+              if(markering.Type_of_worker === "Kierowca") {
 
                 return (
                   <div key={markering.username}>
@@ -128,8 +98,6 @@ function Map() {
             {selectedMarker && (
               <InfoWindow position={{lat: selectedMarker.location_lat, lng: selectedMarker.location_lng}} onCloseClick={() => {setSelectedMarker("")}}>
                 <h2>Imię i nazwisko: {selectedMarker.displayName}</h2>
-
-                
               </InfoWindow>
             )}
         </GoogleMap>

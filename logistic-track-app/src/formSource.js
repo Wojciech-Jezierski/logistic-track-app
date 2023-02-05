@@ -15,13 +15,13 @@ export const userInputs = [
     id: "email",
     label: "Email",
     type: "mail",
-    placeholder: "Surname@gmail.com",
+    placeholder: "Nazwisko@gmail.com",
   },
   {
     id: "phone",
     label: "Telefon",
     type: "text",
-    placeholder: "+1 234 567 89",
+    placeholder: "234 567 899",
   },
   {
     id: "password",
@@ -32,13 +32,13 @@ export const userInputs = [
     id: "Type_of_worker",
     label: "Typ pracownika",
     type: "text",
-    placeholder: "Forwarder or Driver"
+    placeholder: "Spedytor lub Kierowca"
   },
   {
     id: "country",
     label: "Kraj",
     type: "text",
-    placeholder: "Poland",
+    placeholder: "Polska",
   },
   // {
   //   id: "location",

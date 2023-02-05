@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useContext } from "react";
 import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {AuthContext} from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: #2B303A;
@@ -256,6 +259,16 @@ const ItemLink = styled(NavLink)`
 function HamburgerMenu() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  const navitage = useNavigate()
+  const {dispatch} = useContext(AuthContext)
+
+  const logout = (userCredential) => {
+    const user = userCredential.user;
+    dispatch({type:"LOGOUT", payload:user})
+    navitage("/")
+  };
+
   return (
     <>
       <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
@@ -283,6 +296,11 @@ function HamburgerMenu() {
           <li>
             <ItemLink onClick={handleClick} to="/help">
               Pomoc
+            </ItemLink>
+          </li>
+          <li>
+          <ItemLink onClick={logout} to='/login'>
+                Wyloguj
             </ItemLink>
           </li>
         </List>

@@ -11,13 +11,13 @@ const Footer = () => {
             <h3>Logistic track app</h3>
 
             <p className="footer-links">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
                 |
-                <a href="#">About</a>
+                <a href="/About">About</a>
                 |
-                <a href="#">Track map</a>
+                <a href="/">Track map</a>
                 |
-                <a href="#">Help</a>
+                <a href="/Help">Help</a>
             </p>
 
             <p className="footer-company-name">Copyright © 2021 <strong>Wojciech Jezierski</strong> All rights reserved</p>
