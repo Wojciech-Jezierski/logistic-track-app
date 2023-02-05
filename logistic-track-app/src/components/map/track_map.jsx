@@ -126,7 +126,7 @@ function Map() {
             })}
             
             {selectedMarker && (
-              <InfoWindow position={{lat: selectedMarker.location_lat, lng: selectedMarker.location_lng}}>
+              <InfoWindow position={{lat: selectedMarker.location_lat, lng: selectedMarker.location_lng}} onCloseClick={() => {setSelectedMarker("")}}>
                 <h2>Imię i nazwisko: {selectedMarker.displayName}</h2>
 
                 
