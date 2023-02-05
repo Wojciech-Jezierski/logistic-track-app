@@ -2,12 +2,14 @@ import "./new.scss";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
+import 'firebase/compat/firestore';
 import {
   addDoc,
   collection,
   doc,
   serverTimestamp,
   setDoc,
+  updateDoc,
 } from "firebase/firestore";
 import { auth, db, storage } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -68,10 +70,21 @@ const New = ({ inputs, title }) => {
     setData({ ...data, [id]: value });
   };
 
-  const curloc = () => {
-    return 54.34291745084651, 18.616165406280462;
-  }
+  const [latitude, setLatitude] = useState();
+  const [longitude, setLongitude] = useState();
+  // const database = doc(db, "users".toString(Gb6JiRKJZAQMlb8xKbjE6PxbzYn2), "location_lat");
+
+        useEffect(() => {
+          navigator.geolocation.getCurrentPosition((position) => {
+          setLatitude(position.coords.latitude)
+          setLongitude(position.coords.longitude)    
+      })
+  
+    }, [])
+
+  
   const handleAdd = async (e) => {
+    
     e.preventDefault();
     try {
       const res = await createUserWithEmailAndPassword(
@@ -82,8 +95,8 @@ const New = ({ inputs, title }) => {
       await setDoc(doc(db, "users", res.user.uid), {
         ...data,
         timeStamp: serverTimestamp(),
-        location_lat: curloc(),
-        location_lng: curloc(),
+        location_lat: latitude,
+        location_lng: longitude,
       });
       navigate(-1)
     } catch (err) {

@@ -8,7 +8,7 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB6T98ntMDtr4r0f_fmBuL-2kjoTJzJNTo",
+  apiKey: "AIzaSyB21itJ83FuzsHb6KiVuopZz2vWhssbKTY",
   authDomain: "logistic-track-app.firebaseapp.com",
   projectId: "logistic-track-app",
   storageBucket: "logistic-track-app.appspot.com",
