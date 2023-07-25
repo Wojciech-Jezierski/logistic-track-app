@@ -40,10 +40,4 @@ export const userInputs = [
     type: "text",
     placeholder: "Polska",
   },
-  // {
-  //   id: "location",
-  //   label: "Location",
-  //   type: "geopoint",
-  //   placeholder: "...",
-  // }
 ];
