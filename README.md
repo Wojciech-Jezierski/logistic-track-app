@@ -19,3 +19,11 @@ An application created for the needs of an engineering project
 #### Firebase
 #### Cypress
 #### GIT
+
+
+### Features
+
+#### Login system with employee authentication.
+#### Possibility of creating and deleting users.
+#### Application connected to Firebase database.
+#### All major functionalities has been tested in the Cypress tool.
